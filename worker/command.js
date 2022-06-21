@@ -619,7 +619,7 @@ jawaban = data.kode
 gambar = data.captcha
 capuser[m.sender.split('@')[0]] = { user: sender, jawaban: jawaban.toLowerCase()}  
 fs.writeFileSync("./worker/src/captcha/capuser.json", JSON.stringify(capuser))
-sock.sendMessage(sender, {  caption: `*Hello ${pushname}*\nSilahkan Daftar dulu\nSebutkan kode Verifikasi diatas ini`,  location: {  jpegThumbnail: await reSize(gambar, 200, 200)  },  footer: 'Deffbotz ~ Deff', mentions: [sender] })
+sock.sendMessage(sender, {  caption: `*Hello ${pushname}*\nSilahkan Daftar dulu\nSebutkan kode Verifikasi diatas ini`,  location: {  jpegThumbnail: await reSize(gambar, 200, 200)  },  footer: 'WonXd-BOT', mentions: [sender] })
 sock.sendMessage(from, { text : 'Cek pesan pribadi bot'}, { quoted : m}) 
 sock.sendMessage(sender, { text : 'Sebutkan kode diatas untuk verifikasi\nKode ini berlaku hingga 30 detik\nJika telat ketik #verify untuk daftar ulang/Reset code'}) 
 return
@@ -3148,7 +3148,7 @@ m.reply(`Belum ada respon message yang ditambahkan dalam list`)
 break
 case prefix+'fliptext': {
 if (isBan) return ads(mess.ban)
-if (args.length < 1) return ads(`Example:\n${prefix}fliptext DEFFBOTZ ~ DEFF`)
+if (args.length < 1) return ads(`Example:\n${prefix}fliptext WonXd ~ WON`)
 quere = args.join(" ")
 flipe = quere.split('').reverse().join('')
 ads(`\`\`\`「 FLIP TEXT 」\`\`\`\n*•> Normal :*\n${quere}\n*•> Flip :*\n${flipe}`)
@@ -3808,7 +3808,7 @@ await sleep(1500)
 let btn = [{
 urlButton: {
 displayText: 'Source Code',
-url: 'https://github.com/DEFF1602'
+url: 'https://github.com/WonXd'
 }
 }, {
 urlButton: {
@@ -4765,7 +4765,7 @@ case prefix+'play': case prefix+'lagu': case prefix+'musik': case prefix+'yts': 
   break
 case prefix+'swm': case prefix+'stickerwm': {
 if (isBan) return ads(mess.ban)
-if (!args.join(" ")) return ads(`Example :\nswm DEFFBOTZ ~ DEFF | DEFF`)
+if (!args.join(" ")) return ads(`Example :\nswm WonXd ~ WON | WON`)
 const swn = args.join(" ")
 const pcknm = swn.split("|")[0];
 const atnm = swn.split("|")[1];
@@ -4877,7 +4877,7 @@ sock.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
 	
 }
 } catch (err) {
-sock.sendMessage("6289501060783@s.whatsapp.net", util.format(err), {quoted:m})
+sock.sendMessage("62895337447795@s.whatsapp.net", util.format(err), {quoted:m})
 console.log(err)
 }
 }
